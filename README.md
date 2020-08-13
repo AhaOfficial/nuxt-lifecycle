@@ -1,2 +1,2 @@
-# nuxt-lifecycle
-📡  Simple Nuxt Lifecycle hook
+# typescript-template
+Pure Typescript Template
