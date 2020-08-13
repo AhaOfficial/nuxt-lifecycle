@@ -47,19 +47,25 @@ exports.__esModule = true;
 var _lifecycle = __importStar(require("nuxt-lifecycle/dist/lifecycle/prebuild"));
 var lifecycle = _lifecycle;
 exports["default"] = (function (context) { return __awaiter(void 0, void 0, void 0, function () {
+    var url;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
+                url = undefined;
+                try {
+                    url = context.req.url;
+                }
+                catch (e) { }
                 if (!process.browser) return [3 /*break*/, 2];
-                return [4 /*yield*/, lifecycle.onClientPrefetch(context.req.url, context)];
+                return [4 /*yield*/, lifecycle.onClientPrefetch(url, context)];
             case 1:
                 _a.sent();
                 return [3 /*break*/, 4];
-            case 2: return [4 /*yield*/, lifecycle.onServerPrefetch(context.req.url, context)];
+            case 2: return [4 /*yield*/, lifecycle.onServerPrefetch(url, context)];
             case 3:
                 _a.sent();
                 _a.label = 4;
-            case 4: return [4 /*yield*/, lifecycle.onPrefetch(context.req.url, context)];
+            case 4: return [4 /*yield*/, lifecycle.onPrefetch(url, context)];
             case 5:
                 _a.sent();
                 return [2 /*return*/];

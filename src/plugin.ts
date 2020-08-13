@@ -10,8 +10,10 @@ type lifecycleType = {
 const lifecycle: lifecycleType = _lifecycle
 
 export default async (context: Context) => {
+    let url: string | undefined = undefined
+    try { url = context.req.url } catch (e) { }
 
-    if (process.browser) await lifecycle.onClientPrefetch(context.req.url, context)
-    else await lifecycle.onServerPrefetch(context.req.url, context)
-    await lifecycle.onPrefetch(context.req.url, context)
+    if (process.browser) await lifecycle.onClientPrefetch(url, context)
+    else await lifecycle.onServerPrefetch(url, context)
+    await lifecycle.onPrefetch(url, context)
 }

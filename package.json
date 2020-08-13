@@ -1,6 +1,6 @@
 {
   "name": "nuxt-lifecycle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "⚙️ Nuxt Lifecycle",
   "scripts": {
     "build": "tsc",
@@ -10,8 +10,11 @@
   },
   "main": "./dist/index.js",
   "type": "./dist/index.d.ts",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nuxt",
+    "lifecycle"
+  ],
+  "author": "AhaOfficial",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
