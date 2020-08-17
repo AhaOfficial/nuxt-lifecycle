@@ -8,7 +8,6 @@
 
 <br/>
 
-
 ## 🌎 Global
 
 > The following multilingual documents are provided. (need pull request help)
