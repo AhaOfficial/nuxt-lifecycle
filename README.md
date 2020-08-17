@@ -4,59 +4,71 @@
 
 # 📦 Nuxt-Lifecycle
 
-> 넉스트(Nuxt) 에서 렌더링이나 라우팅이 발생하기 전 먼저 실행되는 생명주기 훅입니다.
+> A life cycle hook that runs before rendering or routing occurs in Nuxt.
+
+<br/>
 
 
+## 🌎 Global
 
-## ⚗️ 설치방법
+> The following multilingual documents are provided. (need pull request help)
 
-> 이 모듈을 설치하려면 아래 명령어를 입력해주세요.
+([한국어 문서 보기](https://github.com/AhaOfficial/nuxt-lifecycle/blob/master/docs/README.KR.md))
+
+<br/>
+
+## ⚗️ Installation
+
+> Please enter the command below to install this module.
 
 ```bash
 npm i nuxt-lifecycle
 ```
 
-> 그 다음 `nuxt.config.js` 또는 `nuxt.config.ts` 에 아래 내용을 정의해주세요.
+> Then define the following in `nuxt.config.js` or `nuxt.config.ts`.
 
 ```json
 {
-  modules: ['nuxt-lifecycle']
+  "modules": ["nuxt-lifecycle"]
 }
 ```
 
 <br/>
 
-## 🔮 사용방법
+## 🔮 How to use
 
-> `nuxt-lifecycle` 모듈을 사용하는 방법을 아래 설명합니다.
+> Instructions on how to use the `nuxt-life cycle` module are described below.
 
 ```ts
 import * as Lifecycle from 'nuxt-lifecycle'
 
 Lifecycle.onPrefetch(async (url, context) => {
-  // 클라이언트와 서버에서 렌더링이나 라우팅이 발생하기 전 먼저 실행됩니다.
-  // (Promise 를 리턴하는 경우 해당 처리가 끝나기 전까지 렌더링이나 라우팅이 발생하지 않습니다.)
+  // Runs before rendering or routing occurs on clients and servers.
+  // (If Promise is returned, rendering or routing will
+  //  not occur until the processing is complete.)
 })
 
 Lifecycle.onServerPrefetch(async (url, context) => {
-  // 서버에서 렌더링이나 라우팅이 발생하기 전 먼저 실행됩니다.
-  // (Promise 를 리턴하는 경우 해당 처리가 끝나기 전까지 렌더링이나 라우팅이 발생하지 않습니다.)
+  // Runs before rendering or routing occurs on the server.
+  // (If Promise is returned, rendering or routing will
+  //  not occur until the processing is complete.)
 })
 
 Lifecycle.onClientPrefetch(async (url, context) => {
-  // 클라이언트에서 렌더링이나 라우팅이 발생하기 전 먼저 실행됩니다.
-  // (Promise 를 리턴하는 경우 해당 처리가 끝나기 전까지 렌더링이나 라우팅이 발생하지 않습니다.)
+  // Runs before rendering or routing occurs on the client.
+  // (If Promise is returned, rendering or routing will
+  //  not occur until the processing is complete.)
 })
 
-// 현재 클라이언트에서 작동 중인 경우 true 를 반환합니다.
+// Returns true if it is currently operating on a client.
 Lifecycle.isClient()
 
-// 현재 서버에서 작동 중인 경우 true 를 반환합니다.
+// Returns true if it is currently operating on a server.
 Lifecycle.isServer()
 ```
 
 
 
-## 🏷 저작권
+## 🏷 License
 
 MIT Licensed.

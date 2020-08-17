@@ -4,62 +4,59 @@
 
 # 📦 Nuxt-Lifecycle
 
-> A life cycle hook that runs before rendering or routing occurs in Nuxt.
+> 넉스트(Nuxt) 에서 렌더링이나 라우팅이 발생하기 전 먼저 실행되는 생명주기 훅입니다.
 
 
 
-## ⚗️ Installation
+## ⚗️ 설치방법
 
-> Please enter the command below to install this module.
+> 이 모듈을 설치하려면 아래 명령어를 입력해주세요.
 
 ```bash
 npm i nuxt-lifecycle
 ```
 
-> Then define the following in `nuxt.config.js` or `nuxt.config.ts`.
+> 그 다음 `nuxt.config.js` 또는 `nuxt.config.ts` 에 아래 내용을 정의해주세요.
 
 ```json
 {
-  modules: ['nuxt-lifecycle']
+  "modules": ["nuxt-lifecycle"]
 }
 ```
 
 <br/>
 
-## 🔮 How to use
+## 🔮 사용방법
 
-> Instructions on how to use the `nuxt-life cycle` module are described below.
+> `nuxt-lifecycle` 모듈을 사용하는 방법을 아래 설명합니다.
 
 ```ts
 import * as Lifecycle from 'nuxt-lifecycle'
 
 Lifecycle.onPrefetch(async (url, context) => {
-  // Runs before rendering or routing occurs on clients and servers.
-  // (If Promise is returned, rendering or routing will
-  //  not occur until the processing is complete.)
+  // 클라이언트와 서버에서 렌더링이나 라우팅이 발생하기 전 먼저 실행됩니다.
+  // (Promise 를 리턴하는 경우 해당 처리가 끝나기 전까지 렌더링이나 라우팅이 발생하지 않습니다.)
 })
 
 Lifecycle.onServerPrefetch(async (url, context) => {
-  // Runs before rendering or routing occurs on the server.
-  // (If Promise is returned, rendering or routing will
-  //  not occur until the processing is complete.)
+  // 서버에서 렌더링이나 라우팅이 발생하기 전 먼저 실행됩니다.
+  // (Promise 를 리턴하는 경우 해당 처리가 끝나기 전까지 렌더링이나 라우팅이 발생하지 않습니다.)
 })
 
 Lifecycle.onClientPrefetch(async (url, context) => {
-  // Runs before rendering or routing occurs on the client.
-  // (If Promise is returned, rendering or routing will
-  //  not occur until the processing is complete.)
+  // 클라이언트에서 렌더링이나 라우팅이 발생하기 전 먼저 실행됩니다.
+  // (Promise 를 리턴하는 경우 해당 처리가 끝나기 전까지 렌더링이나 라우팅이 발생하지 않습니다.)
 })
 
-// Returns true if it is currently operating on a client.
+// 현재 클라이언트에서 작동 중인 경우 true 를 반환합니다.
 Lifecycle.isClient()
 
-// Returns true if it is currently operating on a server.
+// 현재 서버에서 작동 중인 경우 true 를 반환합니다.
 Lifecycle.isServer()
 ```
 
 
 
-## 🏷 License
+## 🏷 저작권
 
 MIT Licensed.
