@@ -14,6 +14,8 @@
 
 ([한국어 문서 보기](https://github.com/AhaOfficial/nuxt-lifecycle/blob/master/docs/README.KR.md))
 
+([Zobacz tłumaczenie w języku polskim](https://github.com/AhaOfficial/nuxt-lifecycle/blob/master/docs/README.PL.md))
+
 <br/>
 
 ## ⚗️ Installation
@@ -65,8 +67,6 @@ Lifecycle.isClient()
 // Returns true if it is currently operating on a server.
 Lifecycle.isServer()
 ```
-
-
 
 ## 🏷 License
 
