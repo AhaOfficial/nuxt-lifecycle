@@ -17,3 +17,8 @@ export const onServerPrefetch = async (url: string | undefined, context: Context
 export const onPrefetch = async (url: string | undefined, context: Context) => {
     for (let callback of callbackMap['onPrefetch']) await callback(url, context)
 }
+export const clearAllPrefetch = async (url: string | undefined, context: Context) => {
+    callbackMap.onClientPrefetch = []
+    callbackMap.onServerPrefetch = []
+    callbackMap.onPrefetch = []
+}

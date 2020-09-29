@@ -104,3 +104,11 @@ exports.onPrefetch = function (url, context) { return __awaiter(void 0, void 0, 
         }
     });
 }); };
+exports.clearAllPrefetch = function (url, context) { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        exports.callbackMap.onClientPrefetch = [];
+        exports.callbackMap.onServerPrefetch = [];
+        exports.callbackMap.onPrefetch = [];
+        return [2 /*return*/];
+    });
+}); };

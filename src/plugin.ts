@@ -6,6 +6,7 @@ type lifecycleType = {
     onPrefetch: (url: string | undefined, context: Context) => Promise<any>
     onClientPrefetch: (url: string | undefined, context: Context) => Promise<any>
     onServerPrefetch: (url: string | undefined, context: Context) => Promise<any>
+    clearAllPrefetch: Function
 }
 const lifecycle: lifecycleType = _lifecycle
 
@@ -16,4 +17,6 @@ export default async (context: Context) => {
     if (process.browser) await lifecycle.onClientPrefetch(url, context)
     else await lifecycle.onServerPrefetch(url, context)
     await lifecycle.onPrefetch(url, context)
+
+    lifecycle.clearAllPrefetch()
 }

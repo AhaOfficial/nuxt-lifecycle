@@ -68,6 +68,7 @@ exports["default"] = (function (context) { return __awaiter(void 0, void 0, void
             case 4: return [4 /*yield*/, lifecycle.onPrefetch(url, context)];
             case 5:
                 _a.sent();
+                lifecycle.clearAllPrefetch();
                 return [2 /*return*/];
         }
     });
