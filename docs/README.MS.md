@@ -4,27 +4,19 @@
 
 # 📦 Nuxt-Lifecycle
 
-> A life cycle hook that runs before rendering or routing occurs in Nuxt.
+> Ia sebuah cangkuk kitaran hidup yang berjalan sebelum rendering atau routing berlaku di Nuxt.
 
 <br/>
 
-## 🌎 Global
+## ⚗️ Pemasangan
 
-> The following multilingual documents are provided. (need pull request help)
-
-([한국어 문서 보기](https://github.com/AhaOfficial/nuxt-lifecycle/blob/master/docs/README.KR.md)) ([Bahasa Melayu](https://github.com/AhaOfficial/nuxt-lifecycle/blob/master/docs/README.MS.md))
-
-<br/>
-
-## ⚗️ Installation
-
-> Please enter the command below to install this module.
+> Sila masukkan arahan di bawah untuk memasang modul ini.
 
 ```bash
 npm i nuxt-lifecycle
 ```
 
-> Then define the following in `nuxt.config.js` or `nuxt.config.ts`.
+> Kemudian tentukan perkara berikut dalam `nuxt.config.js` atau `nuxt.config.ts`.
 
 ```json
 {
@@ -34,9 +26,9 @@ npm i nuxt-lifecycle
 
 <br/>
 
-## 🔮 How to use
+## 🔮 Bagaimana nak guna
 
-> Instructions on how to use the `nuxt-life cycle` module are described below.
+> Arahan mengenai cara menggunakan modul `nuxt-life cycle` dijelaskan di bawah.
 
 ```ts
 import * as Lifecycle from 'nuxt-lifecycle'
@@ -68,6 +60,6 @@ Lifecycle.isServer()
 
 
 
-## 🏷 License
+## 🏷 Lesen
 
-MIT Licensed.
+Berlesen MIT.
